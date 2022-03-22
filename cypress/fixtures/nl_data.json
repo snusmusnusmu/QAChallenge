@@ -1,0 +1,12 @@
+{ 
+    "url": {
+        "Haushalt": "https://news.shopping.check24.de/u/gm.php?prm=Fwvnx47eLv_766749435_7934935_3&_esuh=_11_adad4bd29e2c2d334e4e4758129ab14ec4b0d8842100212abb86f1f53e0007f9",
+        "Beauty": "https://news.shopping.check24.de/u/gm.php?prm=VDLjGz1AeJ_766749435_7935601_1&_esuh=_11_f7963d544da9ea2af271d48a7f2643b0cc530cd12a176723365642b315ea4c04",
+        "Baby": "https://news.shopping.check24.de/u/gm.php?prm=KtNL3gXKfN_766749435_7934962_3&_esuh=_11_1b482f22212618622cdd5020db7e4aadbf0b0be48276f1b7a5494110e08f7348"
+    },
+
+    "params": {
+        "C962349": "utm_campaign", 
+        "C955682": "wpset"
+    }
+}
