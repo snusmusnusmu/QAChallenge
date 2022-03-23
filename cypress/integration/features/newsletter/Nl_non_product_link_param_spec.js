@@ -30,6 +30,7 @@ describe('Check tracking parameters for non-product links', () => {
                     /**@type{set}*/
                     let set = new Set(paramValues.map(x => x.parameterValue));
                     expect(set.size).to.equal(1, `Checking if ${param} parameter values are the same`);
+                    expect(set.values().next().value).to.not.equal("", `Checking if ${param} parameter value is not empty` );
                 });
             });  
         });
