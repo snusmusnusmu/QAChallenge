@@ -15,9 +15,11 @@ class Nl_helper {
         let parameterValue;
 
         for (let i = 0; i < links.length; i++) {
-            linkUrl = new URL(links[i].toString());
-            parameterValue = linkUrl.searchParams.get(parameterName);
-            if (parameterValue !== null) {
+            /** @type {string} */
+            let link = links[i].toString();
+            if (link.includes(parameterName)){
+                linkUrl = new URL(link); 
+                parameterValue = linkUrl.searchParams.get(parameterName);
                 result.push({link: linkUrl.href, parameterValue: parameterValue});
             }
         }

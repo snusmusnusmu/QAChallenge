@@ -24,10 +24,11 @@ describe('Check tracking parameters for non-product links', () => {
             it(`${testId} Check if ${param} parameter value of all non product links is the same, url: ${category}`,() => {
                 cy.visit(url);
                 cy.wrap(nl_template.getLinksByElementAttribute('a', 'href')).then((links) => {
-                    let webLinks = links.filter(x => x.startsWith("http"));
-                    let paramValues = nl_helper.extractParameterValues(webLinks, param);
-                    let set = new Set(paramValues.map(x => x.parameterValue));
+                    /**@type{array}*/
+                    let paramValues = nl_helper.extractParameterValues(links, param);
                     expect(paramValues.length).to.not.equal(0, `Checking if links with ${param} parameter are found`);
+                    /**@type{set}*/
+                    let set = new Set(paramValues.map(x => x.parameterValue));
                     expect(set.size).to.equal(1, `Checking if ${param} parameter values are the same`);
                 });
             });  
